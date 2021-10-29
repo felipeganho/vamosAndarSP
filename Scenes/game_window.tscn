@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=1]
 [ext_resource path="res://art/background 2.png" type="Texture" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://art/Character/Character Jacira (32x32).png" type="Texture" id=18]
 [ext_resource path="res://Scripts/CharacterKinematicBody2D.gd" type="Script" id=19]
 [ext_resource path="res://Scripts/background.gd" type="Script" id=20]
+[ext_resource path="res://art/floor.png" type="Texture" id=21]
 
 [sub_resource type="Animation" id=1]
 resource_name = "walking"
@@ -56,16 +57,18 @@ texture = ExtResource( 2 )
 script = ExtResource( 20 )
 
 [node name="top_ui" parent="CanvasLayer" instance=ExtResource( 3 )]
-visible = false
 margin_right = 576.0
 margin_bottom = 192.0
 goal_prefab = ExtResource( 4 )
 current_level = 0
 
 [node name="bottom_ui" parent="CanvasLayer" instance=ExtResource( 5 )]
-visible = false
 margin_top = 941.0
 margin_bottom = 1033.0
+
+[node name="floor" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 530.478, 275.689 )
+texture = ExtResource( 21 )
 
 [node name="grid" type="Node2D" parent="."]
 script = ExtResource( 6 )
