@@ -16,7 +16,7 @@ func create_goals():
 func check_goals(goal_type):
 	for i in get_child_count():
 		get_child(i).check_goal(goal_type)
-	check_game_win()
+	#check_game_win()
 
 func check_game_win():
 	if goals_met():

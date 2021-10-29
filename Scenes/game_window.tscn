@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=1]
 [ext_resource path="res://art/background 2.png" type="Texture" id=2]
@@ -17,6 +17,25 @@
 [ext_resource path="res://Scenes/Game Win Screen.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Pause.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scripts/MusicPlayer.gd" type="Script" id=17]
+[ext_resource path="res://art/Character/Character Jacira (32x32).png" type="Texture" id=18]
+[ext_resource path="res://Scripts/CharacterKinematicBody2D.gd" type="Script" id=19]
+
+[sub_resource type="Animation" id=1]
+resource_name = "walking"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
 
 [node name="game_window" type="Node2D"]
 
@@ -26,7 +45,6 @@
 layer = -1
 
 [node name="background" type="TextureRect" parent="CanvasLayer"]
-visible = false
 margin_top = 7.0
 margin_right = 576.0
 margin_bottom = 1031.0
@@ -36,14 +54,12 @@ __meta__ = {
 }
 
 [node name="top_ui" parent="CanvasLayer" instance=ExtResource( 3 )]
-visible = false
 margin_right = 576.0
 margin_bottom = 192.0
 goal_prefab = ExtResource( 4 )
 current_level = 0
 
 [node name="bottom_ui" parent="CanvasLayer" instance=ExtResource( 5 )]
-visible = false
 margin_top = 941.0
 margin_bottom = 1033.0
 
@@ -108,6 +124,18 @@ script = ExtResource( 14 )
 
 [node name="MusicPlayer" type="Node" parent="."]
 script = ExtResource( 17 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+script = ExtResource( 19 )
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( 35.9188, 224.492 )
+texture = ExtResource( 18 )
+vframes = 6
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D"]
+anims/walking = SubResource( 1 )
 
 [connection signal="notify_of_level" from="CanvasLayer/top_ui" to="GoalHolder" method="_on_top_ui_notify_of_level"]
 [connection signal="booster" from="CanvasLayer/bottom_ui" to="grid" method="_on_bottom_ui_booster"]
