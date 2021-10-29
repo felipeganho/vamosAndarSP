@@ -7,14 +7,10 @@
 [ext_resource path="res://art/Pieces/Green Piece.png" type="Texture" id=5]
 
 [node name="green_piece" instance=ExtResource( 1 )]
-
 color = "green"
 row_texture = ExtResource( 2 )
 column_texture = ExtResource( 3 )
 adjacent_texture = ExtResource( 4 )
 
 [node name="Sprite" parent="." index="0"]
-
 texture = ExtResource( 5 )
-
-
