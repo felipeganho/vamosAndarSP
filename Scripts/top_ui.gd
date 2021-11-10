@@ -13,8 +13,14 @@ var max_counter = 0
 #signal to the Goal holder to know what level we're on
 signal notify_of_level
 
+func _process(delta):
+#	decrease_score_bar()
+	score_bar.value -= delta * 28
+
 func _ready():
 	emit_signal("notify_of_level", current_level)
+#	if current_count == 0:
+#		score_bar.value = 100
 	_on_grid_update_score(current_score)
 
 func _on_grid_update_score(amount_to_change):
@@ -26,7 +32,7 @@ func _on_grid_update_score(amount_to_change):
 #	if current_score >= score_bar.max_value:
 #		GameDataManager.level_info[current_level]["stars unlocked"] = 1
 
-func _on_grid_update_counter(amount_to_change = -1):
+func _on_grid_update_counter(amount_to_change = 1):
 	current_count += amount_to_change
 	if current_count > max_counter:
 		current_count = max_counter
@@ -36,7 +42,10 @@ func setup_score_bar(max_score):
 	score_bar.max_value = max_score
 
 func update_score_bar():
-	score_bar.value = current_score
+	score_bar.value += 5
+
+func decrease_score_bar():
+	score_bar.value -= 0.7
 
 func make_goal(new_max, new_texture, new_value):
 	var current = goal_prefab.instance()
