@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Introduction.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 226.923
+margin_top = 408.461
+margin_right = 326.923
+margin_bottom = 458.461
+text = "INTRODUÇÃO
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 194.887
+margin_top = 459.185
+margin_right = 377.887
+margin_bottom = 551.185
+text = "Continuar"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
