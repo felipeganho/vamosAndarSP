@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Question1.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 163.727
+margin_top = 55.4364
+margin_right = 457.727
+margin_bottom = 99.4364
+text = "Qual o melho estado do Brasil?
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+margin_left = 195.136
+margin_top = 414.9
+margin_right = 371.136
+margin_bottom = 469.9
+text = "Minas Gerais"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="CanvasLayer"]
+margin_left = 190.455
+margin_top = 331.021
+margin_right = 362.455
+margin_bottom = 391.021
+text = "Rio de Janeiro"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="CanvasLayer"]
+margin_left = 186.839
+margin_top = 235.419
+margin_right = 358.839
+margin_bottom = 290.419
+text = "Espírito Santo"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="CanvasLayer"]
+margin_left = 191.49
+margin_top = 134.098
+margin_right = 331.49
+margin_bottom = 197.098
+text = "São Paulo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="CanvasLayer/Button3" to="CanvasLayer/Button3" method="_on_Button3_pressed"]

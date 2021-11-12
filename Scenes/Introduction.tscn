@@ -1,29 +1,25 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/Introduction.gd" type="Script" id=1]
+[ext_resource path="res://art/UI/startScreen.png" type="Texture" id=2]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Label" type="Label" parent="."]
-margin_left = 226.923
-margin_top = 408.461
-margin_right = 326.923
-margin_bottom = 458.461
-text = "INTRODUÇÃO
-"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Button" type="Button" parent="."]
-margin_left = 194.887
-margin_top = 459.185
-margin_right = 377.887
-margin_bottom = 551.185
-text = "Continuar"
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 289.782, 516.568 )
+texture = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+margin_left = 39.881
+margin_top = 915.881
+margin_right = 194.881
+margin_bottom = 996.881
+text = "Vamos"
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_Button_pressed"]

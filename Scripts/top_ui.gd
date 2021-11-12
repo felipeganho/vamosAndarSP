@@ -31,6 +31,8 @@ func _on_grid_update_score(amount_to_change):
 		GameDataManager.level_info[current_level]["high score"] = current_score
 #	if current_score >= score_bar.max_value:
 #		GameDataManager.level_info[current_level]["stars unlocked"] = 1
+	if current_score > 10:
+		get_tree().change_scene("res://Scenes/Question1.tscn")
 
 func _on_grid_update_counter(amount_to_change = 1):
 	current_count += amount_to_change

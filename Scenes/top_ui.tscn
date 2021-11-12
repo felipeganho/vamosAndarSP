@@ -16,6 +16,9 @@ margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 current_level = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
