@@ -19,10 +19,14 @@ preload("res://Match 3 Sounds/Sounds/6.ogg"),
 preload("res://Match 3 Sounds/Sounds/7.ogg")
 ]
 
+var sound = preload("res://Match 3 Sounds/Music/Robot Coupe No Vocal - Lost European.mp3")
+
 func _ready():
-	randomize()
-	set_volume()
-	play_random_music()
+	#randomize()
+	#set_volume()
+	#play_random_music()
+	music_player.stream = sound
+	music_player.play()
 
 func play_random_music():
 	var temp = floor(rand_range(0, possible_music.size()))

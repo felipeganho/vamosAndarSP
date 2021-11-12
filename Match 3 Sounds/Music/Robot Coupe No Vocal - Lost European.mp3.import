@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Robot Coupe No Vocal - Lost European.mp3-aa8d3a22c421d010e8beabf661f39577.mp3str"
+
+[deps]
+
+source_file="res://Match 3 Sounds/Music/Robot Coupe No Vocal - Lost European.mp3"
+dest_files=[ "res://.import/Robot Coupe No Vocal - Lost European.mp3-aa8d3a22c421d010e8beabf661f39577.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
