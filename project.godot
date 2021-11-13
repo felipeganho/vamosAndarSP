@@ -15,7 +15,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Vamos andar, SP!"
-run/main_scene="res://Scenes/Introduction.tscn"
+run/main_scene="res://Scenes/game_window2.tscn"
 config/icon="res://icon.png"
 
 [autoload]

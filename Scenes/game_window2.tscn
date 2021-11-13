@@ -48,14 +48,14 @@ tracks/0/keys = {
 layer = -1
 
 [node name="background" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 542.188, 514.351 )
-scale = Vector2( 0.753197, 1.0092 )
+position = Vector2( 539.188, 514.351 )
+scale = Vector2( 0.753, 1.009 )
 texture = ExtResource( 22 )
 script = ExtResource( 20 )
 
 [node name="background2" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 1708.61, 513.169 )
-scale = Vector2( 0.877265, 1.01037 )
+position = Vector2( 1618.61, 515.169 )
+scale = Vector2( 0.753, 1.01 )
 texture = ExtResource( 22 )
 script = ExtResource( 20 )
 
