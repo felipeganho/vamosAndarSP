@@ -22,27 +22,30 @@ __meta__ = {
 current_level = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-anchor_top = 1.0
+anchor_top = 0.872
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 16.0
-margin_top = -172.0
+margin_top = -170.0
 margin_right = -16.0
-margin_bottom = -12.0
+margin_bottom = -10.0
 custom_constants/margin_top = 4
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+anchor_bottom = 0.628
 margin_top = 4.0
 margin_right = 544.0
-margin_bottom = 160.0
+margin_bottom = 184.0
 custom_constants/separation = 48
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+anchor_top = 0.0949317
+anchor_bottom = 0.428932
 margin_right = 150.0
-margin_bottom = 156.0
+margin_bottom = 101.165
 size_flags_horizontal = 3
 
 [node name="ScoreLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
@@ -68,7 +71,7 @@ __meta__ = {
 [node name="CounterLabel" type="Label" parent="MarginContainer/HBoxContainer"]
 margin_left = 198.0
 margin_right = 347.0
-margin_bottom = 156.0
+margin_bottom = 295.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 1 )
@@ -78,7 +81,7 @@ align = 1
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
 margin_left = 395.0
 margin_right = 544.0
-margin_bottom = 156.0
+margin_bottom = 295.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
