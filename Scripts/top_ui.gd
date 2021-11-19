@@ -14,7 +14,7 @@ var max_counter = 0
 signal notify_of_level
 
 func _process(delta):
-#	decrease_score_bar()
+#	decrease_score_bar(delta)
 	score_bar.value -= delta * 28
 
 func _ready():
@@ -31,8 +31,26 @@ func _on_grid_update_score(amount_to_change):
 		GameDataManager.level_info[current_level]["high score"] = current_score
 #	if current_score >= score_bar.max_value:
 #		GameDataManager.level_info[current_level]["stars unlocked"] = 1
-	if current_score > 500:
+	print(get_node("/root/Variables").scene)
+	if current_score > 10 and get_node("/root/Variables").scene == 0:
+		get_node("/root/Variables").scene = 1
 		get_tree().change_scene("res://Scenes/Question1.tscn")
+		
+	if current_score > 150 and get_node("/root/Variables").scene == 1:
+		get_node("/root/Variables").scene = 2
+		get_tree().change_scene("res://Scenes/Question2.tscn")
+		
+	if current_score > 300 and get_node("/root/Variables").scene == 2:
+		get_node("/root/Variables").scene = 3
+		get_tree().change_scene("res://Scenes/Question3.tscn")
+	
+	if current_score > 450 and get_node("/root/Variables").scene == 3:
+		get_node("/root/Variables").scene = 4
+		get_tree().change_scene("res://Scenes/Question4.tscn")
+		
+	if current_score > 600 and get_node("/root/Variables").scene == 4:
+		get_node("/root/Variables").scene = 5
+		get_tree().change_scene("res://Scenes/Question5.tscn")
 
 func _on_grid_update_counter(amount_to_change = 1):
 	current_count += amount_to_change
