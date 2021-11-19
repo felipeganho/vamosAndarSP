@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Introduction.gd" type="Script" id=1]
-[ext_resource path="res://art/UI/startScreen.png" type="Texture" id=2]
+[ext_resource path="res://art/Tutorial1.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/Kenney Future.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
@@ -19,24 +19,25 @@ font_data = ExtResource( 3 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 289.782, 516.568 )
+position = Vector2( 290.785, 512.316 )
+scale = Vector2( 1.2232, 1.40551 )
 texture = ExtResource( 2 )
 
-[node name="Button" type="Button" parent="CanvasLayer"]
+[node name="Button1" type="Button" parent="CanvasLayer"]
 anchor_left = -0.00173611
 anchor_right = -0.00173611
-margin_left = 37.0
-margin_top = 895.476
-margin_right = 191.0
-margin_bottom = 990.476
+margin_left = 210.0
+margin_top = 920.0
+margin_right = 355.0
+margin_bottom = 1004.0
 custom_styles/hover = SubResource( 1 )
 custom_styles/normal = SubResource( 2 )
 custom_fonts/font = SubResource( 3 )
-text = "Jogar"
+text = "Continuar"
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_Button_pressed"]
-[connection signal="ready" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_Button_ready"]
+[connection signal="pressed" from="CanvasLayer/Button1" to="CanvasLayer/Button1" method="_on_Button1_pressed"]
+[connection signal="ready" from="CanvasLayer/Button1" to="CanvasLayer/Button1" method="_on_Button_ready"]

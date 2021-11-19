@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://art/Bottom UI v 2.png" type="Texture" id=1]
+[ext_resource path="res://art/UI/Bottom.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/bottom_ui.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/BoosterManager.gd" type="Script" id=3]
-[ext_resource path="res://art/UI/Pause Button.png" type="Texture" id=4]
+[ext_resource path="res://art/UI/Pause.png" type="Texture" id=4]
 [ext_resource path="res://art/UI/Make Color Bomb Button.png" type="Texture" id=5]
 [ext_resource path="res://Scripts/Booster.gd" type="Script" id=6]
 [ext_resource path="res://art/UI/Plus Ten Seconds Button.png" type="Texture" id=7]
@@ -27,6 +27,9 @@ custom_constants/margin_right = 0
 custom_constants/margin_top = -50
 custom_constants/margin_left = 0
 custom_constants/margin_bottom = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 margin_top = -50.0
@@ -51,8 +54,8 @@ stretch_mode = 5
 "Boosters",
 ]]
 visible = false
-margin_left = 143.0
-margin_right = 250.0
+margin_left = 286.0
+margin_right = 537.0
 margin_bottom = 114.0
 rect_min_size = Vector2( 100, 100 )
 size_flags_horizontal = 3
@@ -69,8 +72,8 @@ destroy_piece_texture = ExtResource( 8 )
 "Boosters",
 ]]
 visible = false
-margin_left = 191.0
-margin_right = 346.0
+margin_left = 286.0
+margin_right = 537.0
 margin_bottom = 114.0
 rect_min_size = Vector2( 100, 100 )
 size_flags_horizontal = 3

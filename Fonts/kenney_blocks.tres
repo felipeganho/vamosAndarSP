@@ -3,10 +3,7 @@
 [ext_resource path="res://Fonts/Kenney Blocks.ttf" type="DynamicFontData" id=1]
 
 [resource]
-
-size = 20
+size = 54
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 1 )
-_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
-
