@@ -46,14 +46,14 @@ tracks/0/keys = {
 layer = -1
 
 [node name="background" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 539.188, 514.351 )
-scale = Vector2( 0.753, 1.009 )
+position = Vector2( 619.909, 447.323 )
+scale = Vector2( 0.49889, 0.580783 )
 texture = ExtResource( 22 )
 script = ExtResource( 20 )
 
 [node name="background2" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 1618.61, 515.169 )
-scale = Vector2( 0.753, 1.01 )
+position = Vector2( 1876.14, 448.287 )
+scale = Vector2( 0.499, 0.581 )
 texture = ExtResource( 22 )
 script = ExtResource( 20 )
 
@@ -133,7 +133,7 @@ script = ExtResource( 17 )
 script = ExtResource( 19 )
 
 [node name="Sprite" type="Sprite" parent="KinematicBody2D"]
-position = Vector2( 70.1985, 265.333 )
+position = Vector2( 78.6743, 275.928 )
 scale = Vector2( 0.454609, 0.47757 )
 texture = ExtResource( 18 )
 hframes = 3
