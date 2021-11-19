@@ -41,6 +41,7 @@ margin_top = 259.812
 margin_right = 483.895
 margin_bottom = 319.812
 text = "Rio de Janeiro"
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -51,7 +52,6 @@ margin_top = 167.985
 margin_right = 484.998
 margin_bottom = 222.985
 text = "Espírito Santo"
-script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -66,4 +66,4 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="CanvasLayer/Button3" to="CanvasLayer/Button3" method="_on_Button3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button2" to="CanvasLayer/Button2" method="_on_Button2_pressed"]

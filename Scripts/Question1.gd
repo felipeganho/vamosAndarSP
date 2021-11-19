@@ -9,9 +9,14 @@ extends Node
 #func _ready():
 #	pass # Replace with function body.
 
+func _on_Button_pressed():
+	get_tree().change_scene("res://Scenes/game_window.tscn")
+	
+func _on_Button2_pressed():
+	get_tree().change_scene("res://Scenes/game_window2.tscn")
+
 func _on_Button3_pressed():
 	get_tree().change_scene("res://Scenes/game_window2.tscn")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_Button4_pressed():
+	get_tree().change_scene("res://Scenes/game_window.tscn")

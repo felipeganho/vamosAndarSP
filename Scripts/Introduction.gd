@@ -22,3 +22,6 @@ func _on_Button1_pressed():
 
 func _on_Button2_pressed():
 	get_tree().change_scene("res://Scenes/game_window.tscn")
+
+func _on_ButtonPlayAgain_pressed():
+	get_tree().change_scene("res://Scenes/Introduction.tscn")
