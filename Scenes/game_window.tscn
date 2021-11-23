@@ -1,9 +1,7 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=1]
-[ext_resource path="res://art/background 2.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/top_ui.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/GoalPrefab.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/GoalPrefab.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/bottom_ui.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/grid.gd" type="Script" id=6]
 [ext_resource path="res://Scenes/HintEffect.tscn" type="PackedScene" id=7]
@@ -17,10 +15,11 @@
 [ext_resource path="res://Scenes/Game Win Screen.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Pause.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scripts/MusicPlayer.gd" type="Script" id=17]
-[ext_resource path="res://art/Character/Character Jacira (32x32).png" type="Texture" id=18]
+[ext_resource path="res://art/Character/Character Jacira (128x128).png" type="Texture" id=18]
 [ext_resource path="res://Scripts/CharacterKinematicBody2D.gd" type="Script" id=19]
 [ext_resource path="res://Scripts/background.gd" type="Script" id=20]
-[ext_resource path="res://art/floor.png" type="Texture" id=21]
+[ext_resource path="res://art/background.png" type="Texture" id=22]
+[ext_resource path="res://Scenes/top_ui.tscn" type="PackedScene" id=23]
 
 [sub_resource type="Animation" id=1]
 resource_name = "walking"
@@ -47,28 +46,26 @@ tracks/0/keys = {
 layer = -1
 
 [node name="background" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 288, 512 )
-texture = ExtResource( 2 )
+position = Vector2( 540.716, 437 )
+scale = Vector2( 1, 1.334 )
+texture = ExtResource( 22 )
 script = ExtResource( 20 )
 
 [node name="background2" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 864, 512 )
-texture = ExtResource( 2 )
+position = Vector2( 1620.61, 439.166 )
+scale = Vector2( 1, 1.33 )
+texture = ExtResource( 22 )
 script = ExtResource( 20 )
 
-[node name="top_ui" parent="CanvasLayer" instance=ExtResource( 3 )]
+[node name="top_ui" parent="CanvasLayer" instance=ExtResource( 23 )]
 margin_right = 576.0
 margin_bottom = 192.0
-goal_prefab = ExtResource( 4 )
+goal_prefab = ExtResource( 3 )
 current_level = 0
 
 [node name="bottom_ui" parent="CanvasLayer" instance=ExtResource( 5 )]
 margin_top = 941.0
 margin_bottom = 1033.0
-
-[node name="floor" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 530.478, 275.689 )
-texture = ExtResource( 21 )
 
 [node name="grid" type="Node2D" parent="."]
 script = ExtResource( 6 )
@@ -136,10 +133,11 @@ script = ExtResource( 17 )
 script = ExtResource( 19 )
 
 [node name="Sprite" type="Sprite" parent="KinematicBody2D"]
-position = Vector2( 35.9188, 224.492 )
+position = Vector2( 70.1985, 265.333 )
+scale = Vector2( 0.454609, 0.47757 )
 texture = ExtResource( 18 )
-vframes = 6
-frame = 1
+hframes = 3
+vframes = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D"]
 anims/walking = SubResource( 1 )

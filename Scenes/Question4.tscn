@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Question1.gd" type="Script" id=1]
+[ext_resource path="res://art/Question.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/kenney_blocks.tres" type="DynamicFont" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 287.652, 511.941 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 91.6286
+margin_top = 112.94
+margin_right = 511.629
+margin_bottom = 175.94
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Qual o melhor estado do Brasil?
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+margin_left = 93.8215
+margin_top = 262.471
+margin_right = 269.821
+margin_bottom = 317.471
+text = "Minas Gerais"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="CanvasLayer"]
+margin_left = 311.895
+margin_top = 259.812
+margin_right = 483.895
+margin_bottom = 319.812
+text = "Rio de Janeiro"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="CanvasLayer"]
+margin_left = 312.998
+margin_top = 167.985
+margin_right = 484.998
+margin_bottom = 222.985
+text = "Espírito Santo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="CanvasLayer"]
+margin_left = 90.2704
+margin_top = 164.719
+margin_right = 268.27
+margin_bottom = 227.719
+text = "São Paulo"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="CanvasLayer/Button4" to="CanvasLayer/Button4" method="_on_Button4_pressed"]
